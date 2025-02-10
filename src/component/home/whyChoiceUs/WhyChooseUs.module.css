@@ -23,12 +23,12 @@
 
 /* Hình ảnh */
 .imageContainer {
-    width: 40%;
+    width: 60%;
 }
 
 .imageContainer img {
     width: 80%;
-    height: auto;
+    height: 500px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }

@@ -2,7 +2,7 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 0 15px;
+    padding: 0 10px; /* Thêm padding để tránh bị tràn viền */
 }
 
 .title {
@@ -17,17 +17,15 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 .imageList {
     display: flex;
     gap: 15px;
     overflow: hidden;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
+/* Điều chỉnh kích thước ảnh theo màn hình */
 .imageItem {
     width: 450px;
     height: 300px;
@@ -70,41 +68,87 @@
     cursor: not-allowed;
 }
 
-/* Responsive */
+/* ✅ Responsive cho Tablet (Màn hình nhỏ hơn 1024px) */
 @media (max-width: 1024px) {
     .imageItem {
-        width: 300px;
-        height: 200px;
+        width: 350px;
+        height: 250px;
     }
 }
 
+/* ✅ Responsive cho Mobile (Màn hình nhỏ hơn 768px) */
 @media (max-width: 768px) {
     .imageWrapper {
         flex-direction: column;
+        align-items: center;
     }
+
     .imageList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
+
     .imageItem {
-        width: 250px;
-        height: 180px;
+        width: 90%; /* Chiếm gần hết màn hình để dễ nhìn */
+        height: auto;
     }
+
     .navButton {
-        padding: 8px;
-        font-size: 16px;
+        display: none; /* Ẩn nút điều hướng trên màn hình nhỏ */
     }
 }
 
+/* ✅ Responsive cho Mobile rất nhỏ (Màn hình nhỏ hơn 480px) */
 @media (max-width: 480px) {
     .title {
-        font-size: 20px;
+        font-size: 20px; /* Giảm kích thước tiêu đề */
     }
+
     .imageItem {
         width: 100%;
         height: auto;
     }
-    .navButton {
-        padding: 6px;
-        font-size: 14px;
+}
+
+
+/* ✅ Responsive cho màn hình nhỏ hơn 414px (iPhone 6s, XR, SE) */
+@media (max-width: 414px) {
+    .imageItem {
+        width: 95%;
+        height: auto;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}
+
+/* ✅ Responsive cho màn hình nhỏ hơn 375px (iPhone SE, Galaxy S8) */
+@media (max-width: 375px) {
+    .imageItem {
+        width: 100%;
+        height: auto;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+/* ✅ Responsive cho màn hình rất nhỏ (dưới 360px, iPhone 5, Galaxy Fold) */
+@media (max-width: 360px) {
+    .relatedImagesContainer {
+        padding: 5px;
+    }
+
+    .imageItem {
+        width: 100%;
+        height: auto;
+    }
+
+    .title {
+        font-size: 18px;
     }
 }

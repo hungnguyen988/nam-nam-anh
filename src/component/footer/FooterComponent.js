@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './FooterComponent.module.css';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import {FaFacebookF, FaTwitter, FaInstagram, FaMapMarkerAlt, FaPhoneAlt} from 'react-icons/fa';
 import { SiZalo } from 'react-icons/si';
 
 function FooterComponent() {
@@ -30,7 +30,12 @@ function FooterComponent() {
                 </div>
             </div>
             <div className={styles.footerBottom}>
-                <p>&copy; 2025. All rights reserved.</p>
+
+                <div className={styles.contactInfo}>
+                    <span><FaMapMarkerAlt/> Địa chỉ: thôn Nam Tiến, xã Kỳ Bắc, huyện Kỳ Anh, tỉnh Hà Tĩnh</span>
+                    <span><FaPhoneAlt/> Hotline: 0963 110 912</span>
+                </div>
+
             </div>
         </footer>
     );

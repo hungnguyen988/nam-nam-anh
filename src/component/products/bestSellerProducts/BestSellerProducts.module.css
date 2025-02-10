@@ -6,19 +6,35 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Tiêu đề */
 .sectionTitle {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
+    text-align: center;
 }
 
+/* Chứa các sản phẩm - có thể cuộn ngang */
 .productContainer {
     display: flex;
     gap: 15px;
     overflow-x: auto;
     padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
+/* Hiệu ứng mượt khi cuộn */
+.productContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.productContainer::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* Mỗi sản phẩm */
 .productCard {
     flex: 0 0 200px;
     background: white;
@@ -26,13 +42,15 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
+    scroll-snap-align: center;
 }
 
 .productCard:hover {
     transform: scale(1.05);
 }
 
+/* Ảnh sản phẩm */
 .productImage {
     width: 100%;
     height: 150px;
@@ -40,13 +58,92 @@
     border-radius: 10px;
 }
 
+/* Tên sản phẩm */
 .productName {
     font-size: 16px;
     font-weight: bold;
     margin: 10px 0;
 }
 
+/* Giá sản phẩm */
 .productPrice {
     font-size: 14px;
     color: #d9534f;
+}
+
+/* ✅ Responsive cho Tablet (dưới 1024px) */
+@media (max-width: 1024px) {
+    .sectionTitle {
+        font-size: 22px;
+    }
+
+    .productContainer {
+        gap: 10px;
+        padding-bottom: 8px;
+    }
+
+    .productCard {
+        flex: 0 0 180px;
+    }
+}
+
+/* ✅ Responsive cho Mobile (dưới 768px) */
+@media (max-width: 768px) {
+    .bestSellerSection {
+        padding: 15px;
+    }
+
+    .sectionTitle {
+        font-size: 20px;
+    }
+
+    .productContainer {
+        gap: 8px;
+        padding-bottom: 6px;
+    }
+
+    .productCard {
+        flex: 0 0 160px;
+        padding: 10px;
+    }
+
+    .productImage {
+        height: 130px;
+    }
+
+    .productName {
+        font-size: 14px;
+    }
+
+    .productPrice {
+        font-size: 13px;
+    }
+}
+
+/* ✅ Responsive cho điện thoại nhỏ hơn 414px (iPhone SE, Galaxy Fold) */
+@media (max-width: 414px) {
+    .sectionTitle {
+        font-size: 18px;
+    }
+
+    .productContainer {
+        gap: 5px;
+    }
+
+    .productCard {
+        flex: 0 0 140px;
+        padding: 8px;
+    }
+
+    .productImage {
+        height: 120px;
+    }
+
+    .productName {
+        font-size: 13px;
+    }
+
+    .productPrice {
+        font-size: 12px;
+    }
 }

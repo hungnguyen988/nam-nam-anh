@@ -18,6 +18,7 @@
     height: calc(100vh - 100px); /* Giữ nguyên chiều cao cũ */
     overflow: hidden; /* Ẩn phần ảnh vượt quá khung */
     position: relative; /* Để có thể đặt text lên ảnh */
+    margin-top: 0px;
 }
 
 .image {

@@ -4,12 +4,10 @@ import styles from "./ProductCategory.module.css"; // CSS module
 
 const ProductCategory = () => {
     const categories = [
-        { name: "Xúc Xích Heo", path: "xuc-xich-heo" },
-        { name: "Xúc Xích Bò", path: "xuc-xich-bo" },
-        { name: "Xúc Xích Gà", path: "xuc-xich-ga" },
-        { name: "Giò Lụa", path: "gio-lua" },
-        { name: "Giò Bò", path: "gio-bo" },
-        { name: "Giò Thủ", path: "gio-thu" }
+        { name: "Nấm Linh Chi", path: "nam-linh-chi" },
+        { name: "Nấm Đông Trùng", path: "nam-dong-trung" },
+        { name: "Nấm Hương", path: "nam-huong" },
+        { name: "Nấm Bào Ngư", path: "nam-bao-ngu" }
     ];
 
     return (

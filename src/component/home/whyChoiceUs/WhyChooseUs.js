@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
             <div className={styles.content}>
                 {/* Hình ảnh */}
                 <div className={styles.imageContainer}>
-                    <img src="/giayphep.png" alt="Tại Sao Chọn Chúng Tôi" />
+                    <img src={`${process.env.PUBLIC_URL}/whychooseus.jpg`} alt="Tại Sao Chọn Chúng Tôi" />
                 </div>
 
                 {/* Lý do */}

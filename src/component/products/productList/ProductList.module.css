@@ -86,3 +86,70 @@
         transform: translateY(0);
     }
 }
+
+/* ✅ Responsive cho Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .productContainer {
+        gap: 15px;
+    }
+
+    .productCard {
+        width: 180px; /* Nhỏ hơn để phù hợp với màn hình nhỏ hơn */
+    }
+
+    .productImage {
+        height: 150px;
+    }
+
+    .productName {
+        font-size: 16px;
+    }
+
+    .productPrice {
+        font-size: 14px;
+    }
+}
+
+/* ✅ Responsive cho Mobile (dưới 768px) */
+@media (max-width: 768px) {
+    .productContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productCard {
+        width: 90%;
+        max-width: 350px; /* Giới hạn kích thước để không quá rộng */
+    }
+
+    .productImage {
+        height: 200px;
+    }
+
+    .productName {
+        font-size: 20px;
+    }
+
+    .productPrice {
+        font-size: 16px;
+    }
+}
+
+/* ✅ Responsive cho điện thoại nhỏ hơn 414px (iPhone SE, Galaxy Fold) */
+@media (max-width: 414px) {
+    .productCard {
+        width: 100%;
+    }
+
+    .productImage {
+        height: 180px;
+    }
+
+    .productName {
+        font-size: 18px;
+    }
+
+    .productPrice {
+        font-size: 14px;
+    }
+}

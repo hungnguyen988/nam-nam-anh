@@ -1,24 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";  // Import Link từ react-router-dom
+import { Link } from "react-router-dom";
 import styles from "./HeaderComponent.module.css";
+import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa"; // Import icon từ react-icons
 
 const HeaderComponent = () => {
     return (
         <header className={styles.header}>
-            <img src="/logocha.png" alt="Logo" />
-            <nav>
-                <ul className={styles.nav}>
-                    <li className={styles.navItem}>
-                        <Link to="/" className={styles.navLink}>TRANG CHỦ</Link>
-                    </li>
-                    <li className={styles.navItem}>
-                        <Link to="/products" className={styles.navLink}>SẢN PHẨM</Link>
-                    </li>
-                    <li className={styles.navItem}>
-                        <Link to="/introduce" className={styles.navLink}>GIỚI THIỆU</Link>
-                    </li>
-                </ul>
-            </nav>
+
+            {/* Logo và menu */}
+            <div className={styles.navContainer}>
+                <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className={styles.logo}/>
+                <nav>
+                    <ul className={styles.nav}>
+                        <li className={styles.navItem}>
+                            <Link to="/" className={styles.navLink}>TRANG CHỦ</Link>
+                        </li>
+                        <li className={styles.navItem}>
+                            <Link to="/products" className={styles.navLink}>SẢN PHẨM</Link>
+                        </li>
+                        <li className={styles.navItem}>
+                            <Link to="/introduce" className={styles.navLink}>GIỚI THIỆU</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            {/* Thanh trên cùng hiển thị thông tin liên hệ */}
+            <div className={styles.topBar}>
+                <div className={styles.contactInfo}>
+                    <span><FaMapMarkerAlt /> Địa chỉ: thôn Nam Tiến, xã Kỳ Bắc, huyện Kỳ Anh, tỉnh Hà Tĩnh</span>
+                    <span><FaPhoneAlt /> Hotline: 0963 110 912</span>
+                </div>
+            </div>
+
         </header>
     );
 };

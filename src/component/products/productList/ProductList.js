@@ -4,37 +4,29 @@ import styles from "./ProductList.module.css";
 import BestSellerProducts from "../bestSellerProducts/BestSellerProducts"; // Import component sản phẩm bán chạy
 
 const productsData = {
-    "xuc-xich-heo": [
-        { id: 1, name: "Xúc Xích Heo Truyền Thống", price: "120.000đ", image: "/xuc_xich_1.jpg" },
-        { id: 2, name: "Xúc Xích Heo Cay", price: "130.000đ", image: "/xuc_xich_2.jpg" }
+    "nam-linh-chi": [
+        { id: 1, name: "Nấm Linh Chi Đỏ", price: "500.000đ", image: `${process.env.PUBLIC_URL}/linh_chi_2.jpg` },
+        { id: 2, name: "Nấm Linh Chi Vàng", price: "600.000đ", image: `${process.env.PUBLIC_URL}/linh_chi_1.jpg`}
     ],
-    "xuc-xich-bo": [
-        { id: 3, name: "Xúc Xích Bò Tươi", price: "150.000đ", image: "/xuc_xich_bo_1.jpg" },
-        { id: 4, name: "Xúc Xích Bò Hun Khói", price: "170.000đ", image: "/xuc_xich_bo_2.jpg" }
+    "nam-dong-trung": [
+        { id: 3, name: "Đông Trùng Hạ Thảo Khô", price: "1.200.000đ", image: `${process.env.PUBLIC_URL}/dong_trung_1.jpg` },
+        { id: 4, name: "Đông Trùng Hạ Thảo Tươi", price: "1.500.000đ", image: `${process.env.PUBLIC_URL}/dong_trung_2.webp` }
     ],
-    "xuc-xich-ga": [
-        { id: 5, name: "Xúc Xích Gà Thịt Thật", price: "110.000đ", image: "/xuc_xich_ga_1.jpg" },
-        { id: 6, name: "Xúc Xích Gà Cay", price: "120.000đ", image: "/xuc_xich_ga_2.jpg" }
+    "nam-huong": [
+        { id: 5, name: "Nấm Hương Rừng", price: "250.000đ", image: `${process.env.PUBLIC_URL}/huong_1.jpg` },
+        { id: 6, name: "Nấm Hương Khô", price: "300.000đ", image: `${process.env.PUBLIC_URL}/huong_2.webp` }
     ],
-    "gio-lua": [
-        { id: 7, name: "Giò Lụa Truyền Thống", price: "180.000đ", image: "/gio_lua_1.jpg" },
-        { id: 8, name: "Giò Lụa Ít Mỡ", price: "190.000đ", image: "/gio_lua_2.jpg" }
-    ],
-    "gio-bo": [
-        { id: 9, name: "Giò Bò Nguyên Chất", price: "200.000đ", image: "/gio_bo_1.jpg" },
-        { id: 10, name: "Giò Bò Đặc Biệt", price: "220.000đ", image: "/gio_bo_2.jpg" }
-    ],
-    "gio-thu": [
-        { id: 11, name: "Giò Thủ Gói Lá Chuối", price: "160.000đ", image: "/gio_thu_1.webp" },
-        { id: 12, name: "Giò Thủ Gói Hút Chân Không", price: "170.000đ", image: "/gio_thu_2.jpg" }
+    "nam-bao-ngu": [
+        { id: 7, name: "Nấm Bào Ngư Xám", price: "80.000đ", image: `${process.env.PUBLIC_URL}/bao_ngu_xam.jpg`},
+        { id: 8, name: "Nấm Bào Ngư Trắng", price: "90.000đ", image:`${process.env.PUBLIC_URL}/bao_ngu_trang.jpeg`}
     ]
 };
 
 const bestSellingProducts = [
-    { id: 1, name: "Xúc Xích Heo Truyền Thống", price: "120.000đ", image: "/xuc_xich_1.jpg" },
-    { id: 3, name: "Xúc Xích Bò Tươi", price: "150.000đ", image: "/xuc_xich_bo_1.jpg" },
-    { id: 7, name: "Giò Lụa Truyền Thống", price: "180.000đ", image: "/gio_lua_1.jpg" },
-    { id: 9, name: "Giò Bò Nguyên Chất", price: "200.000đ", image: "/gio_bo_1.jpg" }
+    { id: 1, name: "Nấm Linh Chi Đỏ", price: "500.000đ", image: `${process.env.PUBLIC_URL}/linh_chi_2.jpg` },
+    { id: 3, name: "Đông Trùng Hạ Thảo Khô", price: "1.200.000đ", image: `${process.env.PUBLIC_URL}/dong_trung_1.jpg` },
+    { id: 5, name: "Nấm Hương Rừng", price: "250.000đ", image: `${process.env.PUBLIC_URL}/huong_1.jpg` },
+    { id: 7, name: "Nấm Bào Ngư Xám", price: "80.000đ", image: `${process.env.PUBLIC_URL}/bao_ngu_xam.jpg` }
 ];
 
 // Lấy tất cả sản phẩm
@@ -50,7 +42,7 @@ const ProductList = () => {
             <BestSellerProducts products={bestSellingProducts} />
 
             {/* Tiêu đề "Tất cả sản phẩm" */}
-            <h2 className={styles.sectionTitle}>📦 Danh sách sản phẩm</h2>
+            <h2 className={styles.sectionTitle}>📦 Tất cả sản phẩm</h2>
 
             {/* Danh sách sản phẩm */}
             <div className={styles.productContainer}>
