@@ -1,0 +1,110 @@
+.relatedImagesContainer {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.title {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.imageList {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imageItem {
+    width: 450px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imageItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imageItem:hover img {
+    transform: scale(1.1);
+}
+
+/* Nút điều hướng */
+.navButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navButton:hover {
+    background-color: #0056b3;
+}
+
+/* Ẩn nút khi không thể bấm */
+.navButton.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .imageItem {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .imageWrapper {
+        flex-direction: column;
+    }
+    .imageList {
+        gap: 10px;
+    }
+    .imageItem {
+        width: 250px;
+        height: 180px;
+    }
+    .navButton {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+    .imageItem {
+        width: 100%;
+        height: auto;
+    }
+    .navButton {
+        padding: 6px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,151 @@
+/* Container chính */
+.imageDetailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 40px auto;
+    width: 80%;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hiệu ứng fade-in khi tải trang */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ảnh */
+.imageDetailImage {
+    width: 35%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imageDetailImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hiệu ứng khi di chuột vào ảnh */
+.imageDetailImage img:hover {
+    transform: scale(1.05);
+}
+
+/* Phần văn bản */
+.imageDetailDescription {
+    width: 65%;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Nút "Xem thêm" */
+.readMore {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.readMore:hover {
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    transform: scale(1.05);
+    animation: blink 1.2s infinite;
+}
+
+/* 🎯 **RESPONSIVE** */
+/* Màn hình dưới 1024px */
+@media (max-width: 1024px) {
+    .imageDetailContainer {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .imageDetailImage {
+        width: 70%;
+    }
+
+    .imageDetailDescription {
+        width: 90%;
+    }
+}
+
+/* Màn hình dưới 768px (Tablet & Mobile) */
+@media (max-width: 768px) {
+    .imageDetailContainer {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .imageDetailImage {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .readMore {
+        padding: 8px 16px;
+    }
+}
+
+/* Màn hình dưới 480px (Mobile nhỏ) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .readMore {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+}

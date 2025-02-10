@@ -1,0 +1,31 @@
+.categoryContainer {
+    width: 30%;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+}
+
+.categoryTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.categoryList {
+    list-style: none;
+    padding: 0;
+}
+
+.categoryList li {
+    margin-bottom: 8px;
+}
+
+.categoryLink {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.categoryLink:hover {
+    color: #d9534f;
+}

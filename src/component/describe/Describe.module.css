@@ -1,0 +1,17 @@
+.sliderContainer {
+    width: 100%;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carouselCell {
+    width: 100%;
+}
+
+.carouselCell img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

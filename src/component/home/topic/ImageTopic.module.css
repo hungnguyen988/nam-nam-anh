@@ -1,0 +1,43 @@
+/*.image-container {*/
+/*    width: 100vw; !* Toàn bộ chiều rộng màn hình *!*/
+/*    height: calc(100vh - 500px); !* Chiều cao của màn hình trừ đi 200px *!*/
+/*    overflow: hidden; !* Ẩn phần ảnh vượt quá khung *!*/
+/*}*/
+
+/*.image {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover; !* Cắt ảnh để lấp đầy mà không méo *!*/
+/*    display: block;*/
+/*}*/
+
+
+
+.image-container {
+    width: 100vw; /* Toàn bộ chiều rộng màn hình */
+    height: calc(100vh - 100px); /* Giữ nguyên chiều cao cũ */
+    overflow: hidden; /* Ẩn phần ảnh vượt quá khung */
+    position: relative; /* Để có thể đặt text lên ảnh */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ nguyên cách ảnh lấp đầy khung mà không méo */
+    display: block;
+}
+
+.textOverlay {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap; /* Giữ chữ trên một dòng */
+    z-index: 10; /* Đảm bảo chữ luôn hiển thị trên ảnh */
+}
